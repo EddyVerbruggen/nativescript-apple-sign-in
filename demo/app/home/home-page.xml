@@ -1,0 +1,15 @@
+<Page class="page"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Sign In with 🍏"/>
+    </ActionBar>
+
+    <StackLayout>
+        <Label class="m-20 c-orange" text="Check the console log for feedback" horizontalAlignment="center"/>
+        <Button class="m-20" text="Sign In with Apple supported?" tap="{{ isSupported }}"/>
+        <Button class="m-20" text="Current Sign In State?" tap="{{ getSignInState }}"/>
+        <Button class="m-20" text="Sign In with Apple!" tap="{{ signIn }}"/>
+    </StackLayout>
+</Page>
