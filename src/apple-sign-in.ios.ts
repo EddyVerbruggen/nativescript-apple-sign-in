@@ -119,6 +119,7 @@ class ASAuthorizationControllerDelegateImpl extends NSObject /* implements ASAut
 
     // console.log(">>> credential.realUserStatus: " + authorization.credential.realUserStatus); // enum
 
+    // TODO return granted scopes
     this.resolve(<SignInWithAppleCredentials>{
       user: authorization.credential.user,
       // scopes: authorization.credential.authorizedScopes // nsarray<asauthorizationscope>

@@ -57,8 +57,7 @@ import { signInWithApple } from "nativescript-apple-sign-in";
 
 signInWithApple(
     {
-        // note that 'scopes' don't currently work - it'll probably be fixed in an upcoming iOS 13 beta
-        // but this is what you'll be doing in the future if you really need those details
+        // by default you don't get these details, but if you provide these scopes you will (and the user will get to choose which ones are allowed)
         scopes: ["EMAIL", "FULLNAME"]
     })
     .then(credential => {
@@ -82,9 +81,3 @@ getSignInWithAppleState(user)
     .then(state => console.log("Sign in state: " + state))
     .catch(err => console.log("Error getting sign in state: " + err));
 ```
-
-## Future work
-At the moment, "Sign In with Apple" seems to ignore any scopes you pass in,
-so at the moment you can't get the email or name of your user.
-
-This will probably change in an upcoming beta so it can be exposed by this plugin.

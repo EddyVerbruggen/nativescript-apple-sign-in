@@ -1,7 +1,7 @@
 {
 	"name": "nativescript-apple-sign-in",
 	"version": "1.0.0",
-	"description": "Your awesome NativeScript plugin.",
+	"description": "Sign In with Apple",
 	"main": "apple-sign-in",
 	"typings": "index.d.ts",
 	"nativescript": {
@@ -20,8 +20,8 @@
 		"tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
 		"plugin.tscwatch": "npm run tsc -- -w",
 		"ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
-		"demo.ios": "npm run tsc && cd ../demo && tns run ios --emulator",
-		"demo.android": "npm run tsc && cd ../demo && tns run android --emulator",
+		"demo.ios": "npm run tsc && cd ../demo && tns run ios",
+		"demo.android": "npm run tsc && cd ../demo && tns run android",
 		"demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
 		"plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-apple-sign-in && tns plugin add ../src",
 		"clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i"
