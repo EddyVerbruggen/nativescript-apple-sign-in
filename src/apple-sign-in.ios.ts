@@ -1,7 +1,13 @@
 import { device } from "tns-core-modules/platform";
 import { ios as iOSUtils } from "tns-core-modules/utils/utils";
-import { SignInWithAppleCredentials, SignInWithAppleOptions, SignInWithAppleState } from "./index";
+import {
+  Name,
+  SignInWithAppleCredentials,
+  SignInWithAppleOptions,
+  SignInWithAppleState
+} from "./index"
 import jsArrayToNSArray = iOSUtils.collections.jsArrayToNSArray;
+import SpannableString = android.text.SpannableString
 
 let controller: any /* ASAuthorizationController */;
 let delegate: ASAuthorizationControllerDelegateImpl;
@@ -119,10 +125,27 @@ class ASAuthorizationControllerDelegateImpl extends NSObject /* implements ASAut
 
     // console.log(">>> credential.realUserStatus: " + authorization.credential.realUserStatus); // enum
 
+    const tokenData: NSData = authorization.credential.identityToken;
+    const identityToken: string = String(new NSString({
+      data: tokenData,
+      encoding: 0
+    }));
+
+    const nameData: NSPersonNameComponents = authorization.credential.fullName;
+    const fullName: Name = nameData ? {
+      familyName: nameData.familyName,
+      givenName: nameData.givenName,
+      middleName: nameData.middleName
+    } : null;
+
+    const email: string = authorization.credential.email;
+
     // TODO return granted scopes
     this.resolve(<SignInWithAppleCredentials>{
       user: authorization.credential.user,
-      // scopes: authorization.credential.authorizedScopes // nsarray<asauthorizationscope>
+      identityToken: identityToken,
+      fullName,
+      email
     });
   }
 
