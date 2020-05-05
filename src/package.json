@@ -1,12 +1,12 @@
 {
 	"name": "nativescript-apple-sign-in",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Sign In with Apple",
 	"main": "apple-sign-in",
 	"typings": "index.d.ts",
 	"nativescript": {
 		"platforms": {
-			"ios": "4.0.0"
+			"ios": "6.4.2"
 		}
 	},
 	"repository": {
@@ -45,13 +45,13 @@
 	"homepage": "https://github.com/EddyVerbruggen/nativescript-apple-sign-in",
 	"readmeFilename": "README.md",
 	"devDependencies": {
-		"tns-core-modules": "^5.0.0",
-		"tns-platform-declarations": "^5.0.0",
-		"typescript": "~3.3.3",
+		"tns-core-modules": "^6.5.1",
+		"tns-platform-declarations": "^6.5.1",
+		"typescript": "~3.8.3",
 		"prompt": "^1.0.0",
-		"rimraf": "^2.6.3",
-		"tslint": "^5.12.1",
-		"semver": "^5.6.0"
+		"rimraf": "^3.0.2",
+		"tslint": "^6.1.2",
+		"semver": "^7.3.2"
 	},
 	"dependencies": {},
 	"bootstrapper": "nativescript-plugin-seed"
