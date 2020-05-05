@@ -49,7 +49,7 @@ const supported: boolean = isSignInWithAppleSupported();
 
 ### `signInWithApple`
 
-Not that you know "Sign In with Apple" is supported on this device, you can have the
+Now that you know "Sign In with Apple" is supported on this device, you can have the
 user sign themself in (after they pressed a nice button for instance).
 
 ```typescript
