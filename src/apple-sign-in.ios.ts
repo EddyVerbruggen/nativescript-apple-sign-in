@@ -4,7 +4,6 @@ import {
   SignInWithAppleAuthorization,
   SignInWithAppleOptions,
   SignInWithAppleState,
-  SignInWithAppleUserDetectionStatus,
   SignInWithAppleCredential
 } from "./index";
 import jsArrayToNSArray = iOSUtils.collections.jsArrayToNSArray;
