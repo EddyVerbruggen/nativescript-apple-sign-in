@@ -10,7 +10,7 @@ import jsArrayToNSArray = iOSUtils.collections.jsArrayToNSArray;
 import nsArrayToJSArray = iOSUtils.collections.nsArrayToJSArray;
 
 let controller: any /* ASAuthorizationController */;
-let delegate: ASAuthorizationControllerDelegateImpl;
+export let delegate: ASAuthorizationControllerDelegateImpl;
 
 declare const ASAuthorizationAppleIDProvider,
   ASAuthorizationController,
