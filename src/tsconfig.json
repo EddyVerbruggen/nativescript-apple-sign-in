@@ -23,12 +23,12 @@
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
     "noFallthroughCasesInSwitch": true,
-    "compilerOptions": {
-      "plugins": [{
+    "plugins": [
+      {
         "transform": "@nativescript/webpack/transformers/ns-transform-native-classes",
         "type": "raw"
-      }]
-    }
+      }
+    ]
   },
   "files": [
     "./references.d.ts",
