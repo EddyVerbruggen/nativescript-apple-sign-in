@@ -49,26 +49,29 @@ const supported: boolean = isSignInWithAppleSupported();
 
 ### `signInWithApple`
 
-Not that you know "Sign In with Apple" is supported on this device, you can have the
+Now that you know "Sign In with Apple" is supported on this device, you can have the
 user sign themself in (after they pressed a nice button for instance).
 
 ```typescript
-import { signInWithApple } from "nativescript-apple-sign-in";
+import { signInWithApple, SignInWithAppleAuthorization } from "nativescript-apple-sign-in";
 
 signInWithApple(
     {
         // by default you don't get these details, but if you provide these scopes you will (and the user will get to choose which ones are allowed)
         scopes: ["EMAIL", "FULLNAME"]
     })
-    .then(credential => {
-        console.log("Signed in, user: " + credential.user);
-        // you can remembed the user to check the sign in state later (see 'getSignInWithAppleState' below)
-        this.user = credential.user;
+    .then((result: SignInWithAppleAuthorization) => {
+        console.log("Signed in, credential: " + result.credential);
+        console.log("Signed in, familyName: " + result.credential.fullName.familyName);
+        // you can remember the user to check the sign in state later (see 'getSignInWithAppleState' below)
+        this.user = result.credential.user;
     })
     .catch(err => console.log("Error signing in: " + err));
 ```
 
 ### `getSignInWithAppleState`
+
+> ⚠️ This does not seem to work on a simulator!
 
 If you want to know the current Sign In status of your user, you can pass the `user` (id) you acquired previously.
 

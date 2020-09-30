@@ -1,5 +1,5 @@
 import { Observable } from "tns-core-modules/data/observable";
-import { signInWithApple, isSignInWithAppleSupported, getSignInWithAppleState } from "nativescript-apple-sign-in";
+import { signInWithApple, isSignInWithAppleSupported, getSignInWithAppleState, SignInWithAppleAuthorization } from "nativescript-apple-sign-in";
 
 export class HomeViewModel extends Observable {
 
@@ -18,11 +18,14 @@ export class HomeViewModel extends Observable {
     signIn(): void {
         signInWithApple(
             {
-                scopes: ["EMAIL"]
+                scopes: ["EMAIL", "FULLNAME"]
             })
-            .then(credential => {
-                console.log("Signed in, user: " + credential.user);
-                this.user = credential.user;
+            .then((result: SignInWithAppleAuthorization) => {
+                console.log("Signed in, credential: " + JSON.stringify(result.credential));
+                console.log("Signed in, familyName: " + result.credential.fullName.familyName);
+                console.log("Signed in, user (id): " + result.credential.user);
+                console.log("Signed in, provider: " + result.provider);
+                this.user = result.credential.user;
             })
             .catch(err => console.log("Error signing in: " + err));
     }
