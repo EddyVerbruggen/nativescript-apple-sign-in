@@ -1,5 +1,5 @@
 {
-	"name": "nativescript-apple-sign-in-enduco",
+	"name": "nativescript-apple-sign-in",
 	"version": "2.0.1",
 	"description": "Sign In with Apple",
 	"main": "apple-sign-in",
@@ -11,7 +11,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/enduco/nativescript-apple-sign-in"
+		"url": "https://github.com/EddyVerbruggen/nativescript-apple-sign-in.git"
 	},
 	"scripts": {
 		"build": "npm install && ts-patch install && tsc",
@@ -34,11 +34,11 @@
 		"Apple Sign In"
 	],
 	"author": {
-		"name": "enduco",
-		"email": "hello@enduco.app"
+		"name": "Eddy Verbruggen, Philipp Staudt, Benedict Strube",
+		"email": "eddyverbruggen@gmail.com"
 	},
 	"bugs": {
-		"url": "https://github.com/enduco/nativescript-mapbox/issues"
+		"url": "https://github.com/EddyVerbruggen/nativescript-apple-sign-in/issues"
 	},
 	"license": "Apache-2.0",
 	"homepage": "https://github.com/enduco/nativescript-apple-sign-in",
