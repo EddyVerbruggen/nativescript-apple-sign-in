@@ -1,32 +1,42 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "declaration": true,
-        "removeComments": true,
-        "noLib": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "skipLibCheck": true,
-        "lib": ["es6", "dom"],
-        "sourceMap": true,
-        "pretty": true,
-        "allowUnreachableCode": false,
-        "allowUnusedLabels": false,
-        "noEmitHelpers": true,
-        "noEmitOnError": false,
-        "noImplicitAny": false,
-        "noImplicitReturns": true,
-        "noImplicitUseStrict": false,
-        "noFallthroughCasesInSwitch": true
-    },
-    "files": [
-        "./references.d.ts",
-        "./apple-sign-in.android.ts",
-        "./apple-sign-in.ios.ts"
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "lib": [
+      "es6",
+      "dom"
     ],
-    "exclude": [
-      "node_modules"
-    ],
-    "compileOnSave": false
+    "sourceMap": true,
+    "pretty": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noEmitHelpers": true,
+    "noEmitOnError": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noFallthroughCasesInSwitch": true,
+    "plugins": [
+      {
+        "transform": "@nativescript/webpack/transformers/ns-transform-native-classes",
+        "type": "raw"
+      }
+    ]
+  },
+  "files": [
+    "./references.d.ts",
+    "./apple-sign-in.android.ts",
+    "./apple-sign-in.ios.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false
 }
