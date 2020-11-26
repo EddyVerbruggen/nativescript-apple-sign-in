@@ -47,10 +47,6 @@ export interface SignInWithAppleAuthorization {
 
 export declare function isSignInWithAppleSupported(): boolean;
 
-export declare function getSignInWithAppleState(
-  user: string
-): Promise<SignInWithAppleState>;
+export declare function getSignInWithAppleState(user: string): Promise<SignInWithAppleState>;
 
-export declare function signInWithApple(
-  options?: SignInWithAppleOptions
-): Promise<SignInWithAppleAuthorization>;
+export declare function signInWithApple(options?: SignInWithAppleOptions): Promise<SignInWithAppleAuthorization>;

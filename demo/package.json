@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@nativescript/android": "7.0.0",
+    "@nativescript/ios": "7.0.6",
     "typescript": "3.9.7"
   },
   "gitHead": "803cec054c44c99eaa59cdc267993e6346f6cb3a",

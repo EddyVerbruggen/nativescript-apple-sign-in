@@ -1,5 +1,5 @@
 import { Observable } from "@nativescript/core";
-import { signInWithApple, isSignInWithAppleSupported, getSignInWithAppleState, SignInWithAppleAuthorization } from "nativescript-apple-sign-in";
+import { getSignInWithAppleState, isSignInWithAppleSupported, signInWithApple, SignInWithAppleAuthorization } from "nativescript-apple-sign-in";
 
 export class HomeViewModel extends Observable {
 

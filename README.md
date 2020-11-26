@@ -1,17 +1,16 @@
 # [Sign In with Apple](https://developer.apple.com/sign-in-with-apple/), for NativeScript
 
-[![Build Status][build-status]][build-url]
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
 [![Twitter Follow][twitter-image]][twitter-url]
 
-[build-status]:https://travis-ci.org/EddyVerbruggen/nativescript-apple-sign-in.svg?branch=master
-[build-url]:https://travis-ci.org/EddyVerbruggen/nativescript-apple-sign-in
 [npm-image]:https://img.shields.io/npm/v/nativescript-apple-sign-in.svg
 [npm-url]:https://npmjs.org/package/nativescript-apple-sign-in
 [downloads-image]:https://img.shields.io/npm/dm/nativescript-apple-sign-in.svg
 [twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me
 [twitter-url]:https://twitter.com/eddyverbruggen
+
+> Plugin version 2+ is compatible with NativeScript 7+. If you use an older NativeScript version, please use plugin version 1.1.0.
 
 ## Requirements
 
