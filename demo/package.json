@@ -6,7 +6,7 @@
     "nativescript-apple-sign-in": "file:../src",
     "nativescript-theme-core": "~1.0.6",
     "@nativescript/core": "7.0.0",
-    "@nativescript/webpack": "3.0.0"
+    "@nativescript/webpack": "5.0.12"
   },
   "devDependencies": {
     "@nativescript/android": "7.0.0",
